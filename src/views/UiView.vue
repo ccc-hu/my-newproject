@@ -28,6 +28,9 @@ import CardBoxComponentEmpty from '@/components/CardBoxComponentEmpty.vue'
 import CardBoxComponentTitle from '@/components/CardBoxComponentTitle.vue'
 import PillTag from '@/components/PillTag.vue'
 
+import { Check, Delete, Edit, Message, Star } from '@element-plus/icons-vue'
+import { Search } from '@element-plus/icons-vue'
+
 const modalOneActive = ref(false)
 
 const modalTwoActive = ref(false)
@@ -222,6 +225,70 @@ const darkModeStore = useDarkModeStore()
         <b>Contrast</b>. NotificationBar
       </NotificationBar>
     </SectionMain>
+
+    <SectionTitle>myButtons</SectionTitle>
+    <SectionTitle>
+      <div class="mb-4">
+        <el-button>Default</el-button>
+        <el-button type="primary">Primary</el-button>
+        <el-button type="success">Success</el-button>
+        <el-button type="info">Info</el-button>
+        <el-button type="warning">Warning</el-button>
+        <el-button type="danger">Danger</el-button>
+      </div>
+
+      <div class="mb-4">
+        <el-button plain>Plain</el-button>
+        <el-button type="primary" plain>Primary</el-button>
+        <el-button type="success" plain>Success</el-button>
+        <el-button type="info" plain>Info</el-button>
+        <el-button type="warning" plain>Warning</el-button>
+        <el-button type="danger" plain>Danger</el-button>
+      </div>
+
+      <div class="mb-4">
+        <el-button round>Round</el-button>
+        <el-button type="primary" round>Primary</el-button>
+        <el-button type="success" round>Success</el-button>
+        <el-button type="info" round>Info</el-button>
+        <el-button type="warning" round>Warning</el-button>
+        <el-button type="danger" round>Danger</el-button>
+      </div>
+
+      <div>
+        <el-button :icon="Search" circle />
+        <el-button type="primary" :icon="Edit" circle />
+        <el-button type="success" :icon="Check" circle />
+        <el-button type="info" :icon="Message" circle />
+        <el-button type="warning" :icon="Star" circle />
+        <el-button type="danger" :icon="Delete" circle />
+      </div>
+    </SectionTitle>
+
+    <SectionTitle>mySearch</SectionTitle>
+    <SectionTitle>
+      <div class="flex flex-wrap items-center mb-4">
+        <el-button size="large">Large</el-button>
+        <el-button>Default</el-button>
+        <el-button size="small">Small</el-button>
+        <el-button size="large" :icon="Search">Search</el-button>
+        <el-button :icon="Search">Search</el-button>
+        <el-button size="small" :icon="Search">Search</el-button>
+      </div>
+      <div class="flex flex-wrap items-center mb-4">
+        <el-button size="large" round>Large</el-button>
+        <el-button round>Default</el-button>
+        <el-button size="small" round>Small</el-button>
+        <el-button size="large" :icon="Search" round>Search</el-button>
+        <el-button :icon="Search" round>Search</el-button>
+        <el-button size="small" :icon="Search" round>Search</el-button>
+      </div>
+      <div class="flex flex-wrap items-center">
+        <el-button :icon="Search" size="large" circle />
+        <el-button :icon="Search" circle />
+        <el-button :icon="Search" size="small" circle />
+      </div>
+    </SectionTitle>
 
     <SectionTitle>Buttons</SectionTitle>
 
